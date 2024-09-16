@@ -18,7 +18,7 @@
                 </h2>
 
                 <div style="text-align: left; font-size: 0.8em;">
-                    Auto: {{post.autor}}
+                    Autor: {{post.autor}}
                 </div>
             </div>
         </div>
@@ -33,7 +33,7 @@
 
         {% for categoria in post.categorias.all %}
 
-        {{categoria.nombre}} &nbsp;&nbsp;&nbsp;
+        <a href="{% url 'categoria' categoria.id %}" class="linksCategorias">{{categoria.nombre}}</a> &nbsp;&nbsp;&nbsp;
 
         {% endfor %}
 
