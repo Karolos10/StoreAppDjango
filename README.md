@@ -9,15 +9,14 @@ Este es un proyecto Django llamado **ProyectoWeb** que incluye una aplicación d
 ## Requisitos
 
 - Python 3.x
-- Django 3.x (o la versión que estés utilizando)
-- pip (para instalar dependencias)
+- Django 3.x 5.1.1
 
 ## Instalación
 
 1. Clona el repositorio:
 
     ```bash
-    git clone https://github.com/tu-usuario/ProyectoWeb.git
+    git clone https://github.com/Karolos10/StoreAppDjango.git
     cd ProyectoWeb
     ```
 
