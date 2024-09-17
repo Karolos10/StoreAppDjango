@@ -7,7 +7,8 @@
 <div class="container">
 
     <div style="float: right;">
-        <p style="color: white;">Tesxto</p>
+        <p style="color: white;">Total: ${{importe_total_carro}}</p>
+        {% include "carro/widget.html" %}
     </div>
     <div class="row">
 
@@ -19,10 +20,10 @@
                 <img src="{{producto.imagen.url}}" alt="imagen" class="card-img-top">
                 <div class="card-body" style="text-align: center;">
                     <h7 class="card-title">{{producto.nombre}}</h7>
-                    <p class="card-text">{{producto.precio}}&nbsp;$</p>
+                    <p class="card-text">${{producto.precio}}&nbsp;</p>
                 </div>
                 <div class="card-footer text-center">
-                    <a href="#" class="btn btn-success">Agregar al carro</a>
+                    <a href="{% url 'carro:agregar_producto' producto.id %}" class="btn btn-success">Agregar al carro</a>
                 </div>
             </div>
         </div>
