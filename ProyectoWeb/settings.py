@@ -44,6 +44,9 @@ INSTALLED_APPS = [
     'contacto',
     'tienda',
     'carro',
+    'autenticacion',
+    'crispy_forms',
+    'crispy_bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -141,3 +144,5 @@ EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

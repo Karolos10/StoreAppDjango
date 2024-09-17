@@ -1,6 +1,5 @@
 class Carro:
     def __init__(self, request):
-        self.request = request
         self.session = request.session
         carro = self.session.get("carro")
         if not carro:
@@ -20,6 +19,7 @@ class Carro:
             for key, value in self.carro.items():
                 if key == str(producto.id):
                     value["cantidad"] = value["cantidad"] + 1
+                    value["precio"] = float(value["precio"]) + producto.precio
                     break
         self.guardar()
     
@@ -37,6 +37,7 @@ class Carro:
         for key, value in self.carro.items():
             if key == str(producto.id):
                 value["cantidad"] = value["cantidad"] - 1
+                value["precio"] = float(value["precio"]) - producto.precio
                 if value["cantidad"] < 1:
                     self.eliminar(producto)
                 break

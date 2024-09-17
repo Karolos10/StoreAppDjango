@@ -28,6 +28,7 @@ urlpatterns = [
     path('ProyectoWebApp/contacto/', include('contacto.urls')),
     path('ProyectoWebApp/tienda/', include('tienda.urls')),
     path('ProyectoWebApp/carro/', include('carro.urls')),
+    path('ProyectoWebApp/autenticacion/', include('autenticacion.urls')),
 ]
 
 if settings.DEBUG:
